@@ -1,10 +1,14 @@
-# typescript-lambda-boilerplate
+# ts-simple-api-proxy-template
 
-AWS Lambda function boilerplate with TypeScript. It will give you a head start on building AWS lambda with TypeScript. Please make sure to add the custom_config with your AWS account information as in step 2 of the Setup section.
+AWS Lambda function template with TypeScript for creating a simple API proxy.The example function simply retrieves data from an API endpoint and return it from API gateway.
 
-The example function simply retrieves data from an API endpoint and return it from API gateway.
+## Tools and Framework
 
-serverless-webpack plugin enables transiplation through webpack before deployment. Once webpack & tsconfig are set, everything works like JavaScript (see the [JavaScript lambda boilerplate](https://github.com/mydatahack/nodejs-lambda-serverless-boilerplate)).
+- Serverless
+- Webpack
+- Typescript
+- Jenkins
+- Mocha
 
 ### Setup
 
@@ -25,6 +29,12 @@ npm run integration
 ```
 
 ### Deployment
+
+1. Jenkins
+
+The project includes an example Jenkinsfile. Update according to your Jenkins setup for pipeline.
+
+2. From local machine
 
 Use npm command and we can pass arguments as below. Alternatively, we can use sls deploy command.
 

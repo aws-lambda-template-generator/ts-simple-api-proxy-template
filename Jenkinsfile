@@ -69,7 +69,7 @@ pipeline {
         nodejs("${NODE_NAME}") {         
           withIAMRole(env.NON_PROD_ACCOUNT_ID ,env.REGION , env.ROLE_NAME) {
             // sh 'sls create_domain --stage ' + params.targetEnv          
-            sh 'npm run deploy:jenkins -- --stage ' + params.targetEnv + ' --account ' + env.NON_PROD_ACCOUNT_ID
+            sh 'npm run deploy -- --stage ' + params.targetEnv + ' --account ' + env.NON_PROD_ACCOUNT_ID
           }
         }
       } // end of prd1 steps     
@@ -84,7 +84,7 @@ pipeline {
         nodejs("${NODE_NAME}") {
           withIAMRole(env.PROD_ACCOUNT_ID ,env.REGION , env.ROLE_NAME) {
             // sh 'sls create_domain --stage ' + params.targetEnv
-            sh 'npm run deploy:jenkins -- --stage preprod --account ' + env.PROD_ACCOUNT_ID
+            sh 'npm run deploy -- --stage preprod --account ' + env.PROD_ACCOUNT_ID
           }
         }
       } // end steps
@@ -98,7 +98,7 @@ pipeline {
         nodejs("${NODE_NAME}") {
           withIAMRole(env.PROD_ACCOUNT_ID ,env.REGION , env.ROLE_NAME) {
             // sh 'sls create_domain --stage ' + params.targetEnv
-            sh 'npm run deploy:jenkins -- --stage ' + params.targetEnv+ ' --account ' + env.PROD_ACCOUNT_ID
+            sh 'npm run deploy -- --stage ' + params.targetEnv+ ' --account ' + env.PROD_ACCOUNT_ID
 
           }
         }
