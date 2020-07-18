@@ -1,23 +1,23 @@
 {
-  "name": "typescript-lambda-serverless-boilerplate",
+  "name": "ts-simple-api-proxy-template",
   "version": "1.0.0",
-  "description": "TypeScript Lambda function boilerplate",
+  "description": "Typescript Lambda function template for a simple API proxy service",
   "scripts": {
     "build": "tsc",
     "watch:build": "tsc --watch",
     "test": "nyc --reporter=html --reporter=text mocha --require source-map-support/register -r ts-node/register test/**/*.spec.ts",
     "test:watch": "mocha --require source-map-support/register -r ts-node/register --watch-files src, test/**/*.spec.ts --watch",
     "integration": "nyc --reporter=html --reporter=text mocha -r ts-node/register --recursive --timeout 5000 integration/**/*.ts",
-    "deploy": "sls deploy"
+    "deploy:jenkins": "sls deploy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mydatahack/typescript-lambda-serverless-boilerplate"
+    "url": "https://github.com/aws-lambda-template-generator/ts-simple-api-proxy-template"
   },
   "keywords": [],
-  "author": "",
+  "author": "mdh",
   "license": "ISC",
-  "homepage": "https://github.com/mydatahack/typescript-lambda-serverless-boilerplate",
+  "homepage": "https://github.com/aws-lambda-template-generator",
   "nyc": {
     "extension": [
       ".ts",
